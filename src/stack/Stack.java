@@ -20,9 +20,9 @@ public class Stack<Trem> {
 
     public Trem desempilhar() throws Exception {
         if(this.estaVazia()) {
-            return null;
+            throw new Exception("Pilha vazia!");
         }
-
+        this.topo--;
         return this.vetor.get(this.topo);
     }
 
